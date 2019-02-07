@@ -29,10 +29,13 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|body|text|index|
+|body|text||
 |image|string||
 |group_id|references|foreign_key|
 |user_id|references|foreign_key|
+#関連性
+belongs_to:user belongs_to:group
+
 
 ## usersテーブル
 
@@ -42,18 +45,25 @@
 |email|text|NOT NULL,index|
 |password|string|NOT NULL|
 
+#関連性
+has_many :messages has_many :users_groups has_many :groups,through: :users_groups
+
 ## groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |name|string|NOT NULL|
 
-## menbersテーブル
+#関連性
+has_many :messages has_many :users_groups has_many :users, through: :users_groups
+
+## users_groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |user_id|references|NOT NULL,foreign_key|
 |group_id|references|NOT NULL,foregin_key|
 
-
+#関連性
+belongs_to :user belongs_to :group
 
