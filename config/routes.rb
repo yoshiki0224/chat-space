@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  root 'messages#imndex'
+  devise_for :users
+  root 'messages#index'
 end
