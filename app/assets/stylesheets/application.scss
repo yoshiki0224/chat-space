@@ -8,3 +8,6 @@
 @import "modules/user";
 @import "messages/messages";
 @import "font-awesome";
+// colors.scssとflash.scssをインポート
+@import "config/colors";
+@import "modules/flash";
