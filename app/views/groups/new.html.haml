@@ -1,5 +1,9 @@
 .chat-group-form
   %h1 新規チャットグループ
+<<<<<<< HEAD
+  = render 'form', { group: @group }
+=======
+>>>>>>> 1055be327df159b918ea680e41dfa4394318512d
   = form_for @group do |f|
     - if @group.errors.any?
       .chat-group-form__errors

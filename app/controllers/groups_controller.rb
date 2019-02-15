@@ -1,6 +1,9 @@
 class GroupsController < ApplicationController
+<<<<<<< HEAD
+=======
   before_action :set_group, only: [:edit, :update]
 
+>>>>>>> 1055be327df159b918ea680e41dfa4394318512d
   def index
   end
 
@@ -27,8 +30,14 @@ class GroupsController < ApplicationController
   end
 
   private
+<<<<<<< HEAD
+
+  def group_params
+    params.require(:group).permit(:name, user_ids: [] )
+=======
   def group_params
     params.require(:group).permit(:name, { :user_ids => [] })
+>>>>>>> 1055be327df159b918ea680e41dfa4394318512d
   end
 
   def set_group

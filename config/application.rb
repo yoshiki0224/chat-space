@@ -12,7 +12,10 @@ config.generators do |g|
       g.helper false
       g.test_framework false
       config.i18n.default_locale = :ja
+<<<<<<< HEAD
+=======
 
+>>>>>>> 1055be327df159b918ea680e41dfa4394318512d
     end
   end
 end
